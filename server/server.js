@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Database connection
@@ -24,9 +25,11 @@ app.get('/', (req, res) => {
 
 // Routes files
 const authRoutes = require('./routes/authRoutes');
+const ideaRoutes = require('./routes/ideaRoutes');
 
 // Mount routers
 app.use('/api/auth', authRoutes);
+app.use('/api/ideas', ideaRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
