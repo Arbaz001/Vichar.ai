@@ -75,8 +75,8 @@ npm run dev
 
 ## 📂 Project Structure
 ```
-ideas-incubator-api/
-├── controllers/       # Business logic
+Vichar.ai/
+├── controllers/      # Business logic
 ├── models/           # MongoDB schemas
 ├── routes/           # API endpoints
 ├── middlewares/      # Auth & other middlewares
