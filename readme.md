@@ -74,7 +74,7 @@ npm run dev
 - **Security**: Helmet, rate limiting
 
 ## 📂 Project Structure
-```mardown
+```markdown
 Vichar.ai/
 ├── controllers/      # Business logic
 ├── models/           # MongoDB schemas
