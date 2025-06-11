@@ -47,7 +47,7 @@ npm run dev
 |--------|------------------------|---------------------------------|
 | POST   | /api/ideas             | Create new idea                 |
 | GET    | /api/ideas             | Get all public ideas            |
-| GET    | /api/ideas/my          | Get user's ideas                |
+| GET    | /api/ideas/my          | Get users ideas                |
 | GET    | /api/ideas/:id         | Get single idea                 |
 | PUT    | /api/ideas/:id         | Update idea                     |
 | DELETE | /api/ideas/:id         | Delete idea                     |
