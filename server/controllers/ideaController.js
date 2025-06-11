@@ -1,5 +1,5 @@
 const Idea = require('../models/Idea');
-
+const { generateIdeaPDF } = require('../utils/generatePDF');
 // @desc    Get all public ideas
 // @route   GET /api/ideas
 const getIdeas = async (req, res) => {
@@ -214,6 +214,29 @@ const getTrendingIdeas = async (req, res) => {
   }
 };
 
+const exportIdeaPDF = async (req, res) => {
+  try {
+    const pdfBuffer = await generateIdeaPDF(req.params.id, req.user.id);
+    
+    // Set response headers
+    res.set({
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `attachment; filename=idea-${req.params.id}.pdf`,
+      'Content-Length': pdfBuffer.length
+    });
+    
+    // Send the PDF
+    res.send(pdfBuffer);
+    
+  } catch (error) {
+    console.error('Export Error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: error.message || 'Failed to generate PDF' 
+    });
+  }
+};
+
 module.exports = {
   getIdeas,
   getMyIdeas,
@@ -223,5 +246,6 @@ module.exports = {
   deleteIdea,
   toggleVote,
   getPopularIdeas,
-  getTrendingIdeas
+  getTrendingIdeas,
+  exportIdeaPDF
 };
