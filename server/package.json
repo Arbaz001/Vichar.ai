@@ -24,6 +24,8 @@
     "morgan": "^1.10.0",
     "node-fetch": "^3.3.2",
     "openai": "^5.2.0",
-    "pdfkit": "^0.17.1"
+    "pdfkit": "^0.17.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }

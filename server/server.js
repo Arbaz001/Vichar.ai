@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
+const setupSwagger = require('./config/swagger');
 
 require('dotenv').config();
 
@@ -14,6 +15,8 @@ app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+setupSwagger(app);
 
 // Database connection
 connectDB();
