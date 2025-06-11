@@ -51,7 +51,7 @@ npm run dev
 | GET    | /api/ideas/:id         | Get single idea                 |
 | PUT    | /api/ideas/:id         | Update idea                     |
 | DELETE | /api/ideas/:id         | Delete idea                     |
-| GET | /api/ideas/:id/export         | export idea as a PDF                     |
+| GET    | /api/ideas/:id/export  | export idea as a PDF            |
 
 ### Engagement
 | Method | Endpoint               | Description                     |
