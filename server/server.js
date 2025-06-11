@@ -27,11 +27,13 @@ app.get('/', (req, res) => {
 const authRoutes = require('./routes/authRoutes');
 const ideaRoutes = require('./routes/ideaRoutes');
 const commentRoutes = require('./routes/commentRoutes');
+const aiRoutes = require('./routes/aiRoutes');
 
 // Mount routers
 app.use('/api/auth', authRoutes);
 app.use('/api/ideas', ideaRoutes);
 app.use('/api/ideas', commentRoutes); // for comment are nested under the ideas
+app.use('/api', aiRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
