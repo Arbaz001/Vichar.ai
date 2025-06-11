@@ -8,7 +8,8 @@ const {
   deleteIdea,
   toggleVote,
   getPopularIdeas,
-  getTrendingIdeas
+  getTrendingIdeas,
+  exportIdeaPDF
 } = require('../controllers/ideaController');
 const { protect } = require('../middlewares/auth');
 
@@ -28,5 +29,7 @@ router.route('/:id')
   .delete(protect, deleteIdea);
 
 router.post('/:id/vote', protect, toggleVote);
+router.get('/:id/export', protect, exportIdeaPDF);
+
 
 module.exports = router;
