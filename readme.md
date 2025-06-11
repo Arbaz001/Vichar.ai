@@ -1,13 +1,13 @@
-```markdown
 # 💡 Vichar.ai API
 
-A Node.js/Express/MongoDB backend for managing and analyzing startup ideas with AI feedback features.
+A Node.js/Express/MongoDB backend for managing and analyzing startup ideas with AI feedback and PDF export features.
 
 **Key Features**:
 - ✅ User authentication (JWT)
 - ✅ Idea management (CRUD)
 - ✅ Voting & commenting system
 - 🧠 AI-powered feedback (Hugging Face)
+- 📄 PDF export functionality
 - 📊 Popular/Trending ideas algorithms
 
 ## 📦 Installation
@@ -20,8 +20,8 @@ A Node.js/Express/MongoDB backend for managing and analyzing startup ideas with 
 ### Setup Steps
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/Vichar.ai-api.git
-cd Vichar.ai-api
+git clone https://github.com/Arbaz001/Vichar.ai.git
+cd Vichar.ai
 
 # 2. Install dependencies
 npm install
@@ -32,7 +32,6 @@ cp .env.example .env
 
 # 4. Start server
 npm run dev
-```
 
 ## 🌐 API Endpoints
 
@@ -52,6 +51,7 @@ npm run dev
 | GET    | /api/ideas/:id         | Get single idea                 |
 | PUT    | /api/ideas/:id         | Update idea                     |
 | DELETE | /api/ideas/:id         | Delete idea                     |
+| GET | /api/ideas/:id/export         | export idea as a PDF                     |
 
 ### Engagement
 | Method | Endpoint               | Description                     |
@@ -70,6 +70,7 @@ npm run dev
 - **Database**: MongoDB + Mongoose
 - **Authentication**: JWT
 - **AI Integration**: Hugging Face Inference API
+- **PDF Generation**: PDFKit
 - **Security**: Helmet, rate limiting
 
 ## 📂 Project Structure
