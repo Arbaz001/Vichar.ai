@@ -22,8 +22,8 @@ setupSwagger(app);
 connectDB();
 
 // Basic route
-app.get('/', (req, res) => {
-  res.json({ message: 'Vichar.ai API' });
+app.get('/api-docs', (req, res) => {
+  res.json({ message: 'Vichar.ai API with swagger' });
 });
 
 // Routes files
