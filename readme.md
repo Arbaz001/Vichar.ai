@@ -101,4 +101,4 @@ MIT License - Free for personal and commercial use
 
 ---
 
-**Made with ❤️ in India** | [Contribute](#) | [Report Issues](#)
+**Author ❤️ Arbaz Ali ** | [Contribute](#) | [Report Issues](#)
